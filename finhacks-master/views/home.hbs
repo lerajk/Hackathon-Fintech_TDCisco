@@ -1,0 +1,40 @@
+<div ng-controller="HomeController">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-10">
+				<br>
+				<h2 id="titleBarChart" style="text-align: center;">Your current Expenditures and Incomes ($ in thousand)</h2>
+				<div id="containerBarChart" style="height: 400px; max-width: 600px; margin: 0 auto"></div>
+			</div>
+		</div>
+
+		<br>
+		<div class="row">
+			<div class="col-md-offset-3 col-md-3">
+				<form>
+					<input type="hidden" name="_csrf" value={{_csrf}} />
+				  <div class="input-group" style="max-width: 300px;">
+				  <input type="text" class="form-control" ng-model="data.price" placeholder="Enter purchase price...">
+				  <span class="input-group-btn">
+					<button class="btn btn-primary" type="button" ng-click="shouldIBuyIt()">Should I buy?</button>
+				  </span>
+				</div><!-- /input-group -->
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-10">
+					<h2 style="text-align: center;">Monthly Average Net Worth</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-10">
+				<div id="containerLineChart" style="height: 400px; max-width: 600px; margin: 0 auto"></div>
+			</div>
+		</div>
+
+
+	</div>
+
+</div>
